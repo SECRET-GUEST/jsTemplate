@@ -1,4 +1,4 @@
-![Python](https://img.shields.io/badge/VERSION-BETA-orange) ![Python](https://img.shields.io/badge/Python-3.10+-blue)
+![Python](https://img.shields.io/badge/VERSION-BETA-orange) ![Javascript](https://img.shields.io/badge/REACT-TYPESCRIPT-blue)
 
 ```
 https://www.patorjk.com/software/taag/#p=display&h=0&f=ANSI%20Shadow&t=MECHA
