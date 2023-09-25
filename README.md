@@ -1,8 +1,7 @@
-![Python](https://img.shields.io/badge/VERSION-BETA-orange) ![Javascript](https://img.shields.io/badge/REACT-TYPESCRIPT-blue)
-
 ```
 https://www.patorjk.com/software/taag/#p=display&h=0&f=ANSI%20Shadow&t=MECHA
 ```
+![Python](https://img.shields.io/badge/VERSION-BETA-orange) ![Javascript](https://img.shields.io/badge/REACT-TYPESCRIPT-blue)
 
 # Title here  + one [emoji](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md#computer) 
 
