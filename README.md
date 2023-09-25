@@ -1,7 +1,30 @@
+
 ```
 https://www.patorjk.com/software/taag/#p=display&h=0&f=ANSI%20Shadow&t=MECHA
 ```
-![Python](https://img.shields.io/badge/VERSION-BETA-orange) ![Javascript](https://img.shields.io/badge/REACT-TYPESCRIPT-blue)
+
+![Status Down](https://img.shields.io/badge/STATUS-DOWN-red?colorA=cyan)
+
+[![NEWS](https://img.shields.io/badge/NEWS-INFO-yellow?style=for-the-badge&colorA=black)](#news)
+
+![REACTTSX](https://img.shields.io/badge/REACT-TYPESCRIPT-blue)
+![TYPESCRIPT](https://img.shields.io/badge/TYPESCRIPT-blue)
+![Javascript](https://img.shields.io/badge/JAVASCRIPT-yellow)
+
+![Batch Script](https://img.shields.io/badge/script-batch-blue)
+![Bash Script](https://img.shields.io/badge/script-bash-green)
+
+
+![ALPHA](https://img.shields.io/badge/ALPHA-red) 
+![BETA](https://img.shields.io/badge/VERSION-BETA-orange) 
+![STABLE](https://img.shields.io/badge/VERSION-1.0.0-green) 
+![DEAD](https://img.shields.io/badge/VERSION-DEAD-grey) 
+
+
+![WINDOWS](https://img.shields.io/badge/windows-blue)
+![LINUX](https://img.shields.io/badge/Debian-LINUX-orange)
+![MACOS](https://img.shields.io/badge/MacOS-white) 
+
 
 # Title here  + one [emoji](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md#computer) 
 
@@ -16,12 +39,13 @@ Short description here
 1. [Features](#-features)
 2. [Prerequisites](#-prerequisites)
 3. [to do](#-todo)
-4. [Usage](#-usage)
-5. [License](#-license)
-6. [Support & Questions](#-support--questions)
-7. [Recommendations](#-recommendations)
-8. [Installation](#-installation)
-
+4. [News](#news)
+5. [Usage](#-usage)
+6. [License](#-license)
+7. [Support & Questions](#-support--questions)
+8. [Recommendations](#-recommendations)
+9. [Installation](#-installation)
+   
 ## 🌟 Features
 
 - ...
@@ -38,6 +62,11 @@ Before you begin, ensure you have the following installed:
 
 1.
 2.
+
+
+## NEWS
+
+- 🗞️ 
 
 ## 📜 License
 
@@ -74,6 +103,11 @@ In your quest for more tools to enhance your desktop productivity, these additio
 - [How Many Books Have I Written As A Developer](https://github.com/SECRET-GUEST/How-Many-Books-Have-I-Written-As-A-Developer) : Gauge the number of lines you've written as a developer.
 
 
+- [LNK reader](https://github.com/SECRET-GUEST/windows_link_reader): Allow dual boot Linux users to work with Windows shortcuts.
+- [Unreal installer](https://github.com/SECRET-GUEST/Unrealinux) : An installer in C++ for Unreal Engine on linux without Epic Games launcher.
+
+
+
 Looking for more? Discover user-friendly, GUI-free script here: 
 - [Tiny Scripts](https://github.com/SECRET-GUEST/tiny-scripts)
 
@@ -83,6 +117,7 @@ If you're a 3D animator, consider:
 
 
 ## 📥 Installation
+
 
 ```
      _ ._  _ , _ ._            _ ._  _ , _ ._    _ ._  _ , _ ._      _ ._  _ , _ .__  _ , _ ._   ._  _ , _ ._   _ , _ ._   .---.  _ ._   _ , _ .__  _ , _ ._   ._  _ , _ ._      _ ._  _ , _ .__  _ , _ . .---<__. \ _
