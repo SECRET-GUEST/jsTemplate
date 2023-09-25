@@ -19,17 +19,7 @@ This repository, `jsTemplate`, serves as a foundation for JavaScript projects, o
 ---
 ---
 
-## 📋 Table of Contents
 
-1. [Features](#-features)
-2. [Prerequisites](#-prerequisites)
-3. [News](#news)
-4. [Usage](#-usage)
-5. [License](#-license)
-6. [Support & Questions](#-support--questions)
-7. [Recommendations](#-recommendations)
-8. [Installation](#-installation)
-   
 ## 🌟 Features
 
 - React TypeScript Template for developing in a React environment using TypeScript.
