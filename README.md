@@ -32,32 +32,70 @@ Before you begin, ensure you have the following installed:
 - [Node.js](https://nodejs.org/)
 - [Git](https://git-scm.com/) (for cloning the repository)
 
-## 🗞️ News
-
-- Check out the various branches for different templates! 
-- For Linux users, use [Actions for Nautilus](https://github.com/SECRET-GUEST/actions-for-nautilus) to clone this repository easily with a single click.
 
 ## 📜 License
 
 This repository is released under the [MIT License](LICENSE). Please see the `LICENSE` file for more information.
 
-## ❓ Support & Questions
 
-If you have any questions or need support, please feel free to open an issue, a new discussion, or join my twitter.
+## 💎 Recommendations
 
-## 💎 Recommendations  
+- For Linux users, check out this [repository](https://github.com/SECRET-GUEST/actions-for-nautilus) to effortlessly create actions in Nautilus, enabling repository creation and cloning with a single click, given that git is installed on your system.
 
-For Linux users, the [Actions for Nautilus](https://github.com/SECRET-GUEST/actions-for-nautilus) repository enables the creation of customized actions in the Nautilus context menu, facilitating the one-click cloning of this repository, provided Git is installed on your system.
 
-## 📥 Installation
+## 📌 Quick Start
 
-### Specific Branch Cloning 
+### Linux users
 
-To clone a specific branch, such as the `react-tsx` branch, use the following Git command:
+Leveraging the [Actions for Nautilus](https://github.com/SECRET-GUEST/actions-for-nautilus) repository allows for the creation of customized actions, including easy cloning of this repository with just one click, provided Git is installed on your system.
 
-```sh
-git clone --branch react-tsx https://github.com/SECRET-GUEST/jsTemplate.git
+### Windows users
+
+You can just clone the `reactsx` branch (or whatever branch you need)
+
+```shell
+git clone https://github.com/SECRET-GUEST/pyTemplate.git --branch reactsx
 ```
 
-### Using Actions for Nautilus (Linux Users)
-If you are using a Linux system with the Nautilus file manager, you can leverage [Actions for Nautilus](https://github.com/SECRET-GUEST/actions-for-nautilus) to create a one-click action to clone this repository.
+you can also use a batch script to make a **one-click installer** for anytime you need to clone :
+
+The batch script below assists in cloning a specific git repository. Before running the script, ensure that Git is installed on your system. You can get it from [Git's official site](https://git-scm.com/). 
+
+Here is a brief explanation of the script:
+
+1. It first checks whether Git is installed on your system.
+2. If Git is installed, it proceeds to clone the 'main' branch of the specified repository (in this case, the pyTemplate repository).
+3. If an error occurs at any point (like Git not being installed or the repository failing to clone), it displays an appropriate error message.
+
+```batch
+@echo off
+:: Check if git is installed
+where git >nul 2>nul
+if %errorlevel% neq 0 (
+    echo Git is not installed. Please install it from https://git-scm.com/ to proceed.
+    exit /b 1
+)
+
+:: Clone the repository
+git clone https://github.com/SECRET-GUEST/jsTemplate.git -b reactsx
+
+if %errorlevel% neq 0 (
+    echo An error occurred while cloning the repository.
+    exit /b 1
+)
+
+echo The repository was cloned successfully.
+exit /b 0
+```
+
+Save this script as a `.bat` file and execute it to clone the repository. Once the repository is cloned successfully, a confirmation message will be displayed.
+
+
+
+## ❓ Support & Questions
+
+For any queries or support needs, please feel free to open an issue or start a discussion. 
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
