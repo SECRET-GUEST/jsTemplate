@@ -11,90 +11,108 @@
 ![REACTTSX](https://img.shields.io/badge/REACT-TYPESCRIPT-blue)
 ![Javascript](https://img.shields.io/badge/JAVASCRIPT-yellow)
 
-# JS Templates 📦 
+# React + TypeScript + Vite + Three.js + sass
 
-This repository, `jsTemplate`, serves as a foundation for JavaScript projects, offering templates for various JavaScript environments like React with TypeScript. Branch `main` is a general example, and it is recommended to clone specific branches to access different templates.
+This template provides a minimal setup to get React working in Vite with Hot Module Replacement (HMR), some ESLint rules, and integration of Three.js.
 
----
----
----
+Currently, two official plugins are available for React:
 
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh.
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh.
 
-## 🌟 Features
+## Expanding the ESLint configuration
 
-- React TypeScript Template for developing in a React environment using TypeScript.
-- Easily cloneable branches for specific template requirements.
-- Structured templates including directories for assets, components, styles, tests, and utils.
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-## 🔍 Prerequisites
-
-Before you begin, ensure you have the following installed:
-- [Node.js](https://nodejs.org/)
-- [Git](https://git-scm.com/) (for cloning the repository)
-
-
-## 📜 License
-
-This repository is released under the [MIT License](LICENSE). Please see the `LICENSE` file for more information.
-
-
-## 💎 Recommendations
-
-- For Linux users, check out this [repository](https://github.com/SECRET-GUEST/actions-for-nautilus) to effortlessly create actions in Nautilus, enabling repository creation and cloning with a single click, given that git is installed on your system.
-
-
-## 📌 Quick Start
-
-### Linux users
-
-Leveraging the [Actions for Nautilus](https://github.com/SECRET-GUEST/actions-for-nautilus) repository allows for the creation of customized actions, including easy cloning of this repository with just one click, provided Git is installed on your system.
-
-### Windows users
-
-You can just clone the `reactsx` branch (or whatever branch you need)
-
-```shell
-git clone https://github.com/SECRET-GUEST/pyTemplate.git --branch reactsx
+```js
+   parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
+   },
 ```
 
-you can also use a batch script to make a **one-click installer** for anytime you need to clone :
+- Replace `plugin:@typescript-eslint/recommended` with `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`.
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`.
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list.
 
-The batch script below assists in cloning a specific git repository. Before running the script, ensure that Git is installed on your system. You can get it from [Git's official site](https://git-scm.com/). 
+## Managing Assets
 
-Here is a brief explanation of the script:
+To include assets such as images, fonts, or 3D files in your project, place them in the `public` folder. You can then reference these files in your code using a URL relative to the `public` folder. For example:
 
-1. It first checks whether Git is installed on your system.
-2. If Git is installed, it proceeds to clone the 'main' branch of the specified repository (in this case, the pyTemplate repository).
-3. If an error occurs at any point (like Git not being installed or the repository failing to clone), it displays an appropriate error message.
-
-```batch
-@echo off
-:: Check if git is installed
-where git >nul 2>nul
-if %errorlevel% neq 0 (
-    echo Git is not installed. Please install it from https://git-scm.com/ to proceed.
-    exit /b 1
-)
-
-:: Clone the repository
-git clone https://github.com/SECRET-GUEST/jsTemplate.git -b reactsx
-
-if %errorlevel% neq 0 (
-    echo An error occurred while cloning the repository.
-    exit /b 1
-)
-
-echo The repository was cloned successfully.
-exit /b 0
+```jsx
+<img src="/images/my-image.png" alt="Description" />
 ```
 
-Save this script as a `.bat` file and execute it to clone the repository. Once the repository is cloned successfully, a confirmation message will be displayed.
+## Project Commands
 
+- **Installing Dependencies**:
+  Since SASS and Three.js are already included in the project configuration, simply run the following command to install all dependencies:
+  ```bash
+  npm install
+  ```
+
+- **Running the Project**:
+  To run the project in development mode, use the following command:
+  ```bash
+  npm run dev
+  ```
+
+- **Building the Project**:
+  To build the project for production, use:
+  ```bash
+  npm run build
+  ```
+
+- **Using the Vite Server**:
+  The Vite server provides a fast development environment with Hot Module Replacement (HMR). When you run the project in development mode using `npm run dev`, Vite will automatically start and serve your project at `http://localhost:3000`.
+
+- **Previewing the Build**:
+  To preview the build, use:
+  ```bash
+  npm run preview
+  ```
+
+
+## Setting the Base URL
+
+In a Vite project, the base URL is set in the `vite.config.ts` file using the `base` option. This is the URL at which your app is hosted. This URL is used by Vite to determine the paths for your built assets.
+
+1. **Rename Configuration File**:
+   If your configuration file is named `vite.config.js`, rename it to `vite.config.ts` to use TypeScript.
+
+2. **Update `vite.config.ts`**:
+   Update the `vite.config.ts` file in the root of your project with the following content, replacing `"https://toffeeshade.github.io/home/"` with the URL of your site:
+
+```typescript
+// vite.config.ts
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  base: 'https://toffeeshade.github.io/home/',
+});
+```
+
+3. **Update `package.json`**:
+   It's a good practice to also update the `homepage` field in the `package.json` file to match the `base` option in the `vite.config.ts` file. This way, other tools and developers will know the intended URL of the hosted app.
+
+```json
+{
+  "homepage": "https://toffeeshade.github.io/home/",
+  ...
+}
+```
+
+Now, when you build your project using `npm run build`, Vite will generate the files with the correct paths based on the `base` option you've set.
 
 
 ## ❓ Support & Questions
 
-For any queries or support needs, please feel free to open an issue or start a discussion. 
+For any queries or support needs, please feel free to open an issue or [start a discussion](https://github.com/SECRET-GUEST/jsTemplate/discussions). 
 
 ## 📜 License
 
