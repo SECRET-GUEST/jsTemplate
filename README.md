@@ -54,7 +54,7 @@ Leveraging the [Actions for Nautilus](https://github.com/SECRET-GUEST/actions-fo
 You can just clone the `reactsx` branch (or whatever branch you need)
 
 ```shell
-git clone https://github.com/SECRET-GUEST/pyTemplate.git --branch reactsx
+git clone https://github.com/SECRET-GUEST/pyTemplate.git --branch Vite-react-ts-three-sass
 ```
 
 you can also use a batch script to make a **one-click installer** for anytime you need to clone :
@@ -77,7 +77,7 @@ if %errorlevel% neq 0 (
 )
 
 :: Clone the repository
-git clone https://github.com/SECRET-GUEST/jsTemplate.git -b reactsx
+git clone https://github.com/SECRET-GUEST/jsTemplate.git -b Vite-react-ts-three-sass
 
 if %errorlevel% neq 0 (
     echo An error occurred while cloning the repository.
